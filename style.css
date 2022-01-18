@@ -1,0 +1,54 @@
+.image-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 500px;
+    height: 300px;
+}
+
+.game-title {
+    
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.game-title a{
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 22;
+    font-weight: 600;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+}
+
+.game-title a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.text-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text-container h2 {
+    background-color: beige;
+    border-radius: 12px;
+    border: 2px, solid, black;
+    cursor: pointer;
+}
+.text-container h2:active {
+    background-color: teal;
+}
