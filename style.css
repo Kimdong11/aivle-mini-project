@@ -1,54 +1,76 @@
-.image-container {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.image-container img {
-    width: 500px;
-    height: 300px;
-    border-radius: 30px;
+@font-face {
+    font-family: "retro";
+    src: url("./font/Super\ Retro\ Italic\ M54.ttf");
 }
 
-.game-title {
-    
-    height: 20%;
-    display: flex;
-    justify-content: center;
+body {
+    background-image: url("./image/background.jpeg");
+    background-size: cover;
 }
 
-.game-title a{
-    background-color: azure;
+.circle-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;    
+}
+
+.start-text {
+    margin-top: 140px;
+    display: flex;
     align-items: center;
-    cursor: pointer;
-    margin-top: 50px;
-    text-decoration: none;
+    justify-content: center;
+    font-family: "retro";
+    font-size: 70px;
+    color: orange;
+    opacity: 88%;
+    text-shadow: -3px 0 orangered, 0 3px orangered, 3px 0 orangered, 0 -3px orangered;
+}
+.line {
+    margin-top: -20px;
+    background-color: orangered;
+    width: 550px;
+    height: 10px;
+    border-radius: 3px;
+    opacity: 90%;
+
+}
+
+.start-text-shadow {
+    position: absolute;
+    top: 125px;
+    left: 450px;
+    font-family: "retro";
+    font-size: 70px;
     color: black;
-    font-size: 22;
-    font-weight: 600;
-    border-radius: 20px;
-    width: 300px;
-    height: 40px;
+    z-index: -1;
+    opacity: 80%;
 }
 
-.game-title a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+#rocket {
+    position: absolute;
+    right: 50%;
+    bottom: 100px;
+    width: 60px;
+    height: 80px;
 }
 
-.text-container {
-    margin-top: 60px;
+.image-container {
+    margin-top: 80px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-.text-container h2 {
-    background-color: beige;
-    border-radius: 12px;
-    border: 2px, solid, black;
-    cursor: pointer;
+#earth, #moon, #jupyter {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 130px;
+    height: 115px;
 }
-.text-container h2:active {
-    background-color: teal;
+
+#saturn {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 140px;
+    height: 125px;
 }
