@@ -3,20 +3,40 @@
     src: url("./font/Super\ Retro\ Italic\ M54.ttf");
 }
 
+@keyframes imageMove {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 body {
+    background-color: black;
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     background-image: url("./image/background.jpeg");
     background-size: cover;
+    z-index: -1;
 }
 
 .circle-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .start-text {
-    margin-top: 140px;
+    margin-top: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,19 +47,17 @@ body {
     text-shadow: -3px 0 orangered, 0 3px orangered, 3px 0 orangered, 0 -3px orangered;
 }
 .line {
-    margin-top: -20px;
+    margin-top: 15px;
     background-color: orangered;
     width: 550px;
     height: 10px;
     border-radius: 3px;
     opacity: 90%;
-
 }
 
 .start-text-shadow {
-    position: absolute;
-    top: 125px;
-    left: 450px;
+    margin-left: 50px;
+    margin-top: -53px;
     font-family: "retro";
     font-size: 70px;
     color: black;
@@ -56,12 +74,19 @@ body {
 }
 
 .image-container {
-    margin-top: 80px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
 }
 
-#earth, #moon, #jupyter {
+#earth {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 130px;
+    height: 115px;
+}
+
+#moon {
     margin-left: 40px;
     margin-right: 40px;
     width: 130px;
@@ -75,3 +100,31 @@ body {
     height: 125px;
 }
 
+#jupyter {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 130px;
+    height: 115px;
+}
+
+.image-container--earth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container--moon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-container--saturn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-container--jupyter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

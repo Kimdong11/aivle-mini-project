@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <img src="./image/rocket.png" alt="rocket" id="rocket">
-    <h1 class="start-text-shadow">GAME START</h1>
- <div class="circle-container">
-     <h1 class="start-text">GAME START</h1>
-     <div class="line"></div>
- </div>
-<div class="image-container">
-    <img src="./image/earth.png" alt="earth" id="earth">
-    <img src="./image/moon.png" alt="moon" id="moon">
-    <img src="./image/saturn.png" alt="saturn" id="saturn">
-    <img src="./image/jupyter.png" alt="jupyter" id="jupyter">
-</div> 
-</body>
-<script src="app.js"></script>
+    <head>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="background"></div>
+        <img src="./image/rocket.png" class="earth" alt="rocket" id="rocket" />
+        <div class="circle-container">
+            <h1 class="start-text">GAME START</h1>
+            <h1 class="start-text-shadow">GAME START</h1>
+            <div class="line"></div>
+        </div>
+        <div class="image-container">
+            <div class="image-container--earth">
+                <img src="./image/earth.png" class="earth" alt="earth" id="earth" />
+            </div>
+            <div class="image-container--moon">
+                <img src="./image/moon.png" class="moon" alt="moon" id="moon" />
+            </div>
+            <div class="image-container--saturn">
+                <img src="./image/saturn.png" class="saturn" alt="saturn" id="saturn" />
+            </div>
+            <div class="image-container--jupyter">
+                <img src="./image/jupyter.png" class="jupyter" alt="jupyter" id="jupyter" />
+            </div>
+        </div>
+    </body>
+    <script src="app.js"></script>
 </html>
