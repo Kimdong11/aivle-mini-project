@@ -13,10 +13,10 @@ const class_name = ["earth", "moon", "saturn", "jupyter"];
 let left = 40.5;
 let cnt = 1;
 
-const earth_css = document.styleSheets[1].rules[12].style;
-const moon_css = document.styleSheets[1].rules[13].style;
-const saturn_css = document.styleSheets[1].rules[14].style;
-const jupyter_css = document.styleSheets[1].rules[15].style;
+const earth_css = document.styleSheets[1].rules[13].style;
+const moon_css = document.styleSheets[1].rules[14].style;
+const saturn_css = document.styleSheets[1].rules[15].style;
+const jupyter_css = document.styleSheets[1].rules[16].style;
 
 // Input Keyboard Function
 const handleMove = (e) => {
