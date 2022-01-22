@@ -24,7 +24,7 @@ const handleMove = (e) => {
     c_name = rocket.className;
     console.log(cnt);
     if (key == "ArrowRight" && cnt <= 3) {
-        rocket.style.left = `${left}%`;
+        rocket.style.marginLeft = `${left}%`;
         rocket.classList.replace(c_name, class_name[cnt]);
         imageAnimation(class_name[cnt]);
         cnt += 1;
@@ -34,7 +34,7 @@ const handleMove = (e) => {
         rocket.classList.replace(c_name, class_name[cnt - 1]);
         left -= 15;
         cnt -= 1;
-        rocket.style.left = `${left}%`;
+        rocket.style.marginLeft = `${left}%`;
     }
     if (key === "Enter") {
         console.log("다음 페이지로 이동!");
@@ -86,7 +86,7 @@ const earthMouseEnter = (e) => {
     cnt = 0;
     left = 25.5;
     console.log(cnt);
-    rocket.style.left = "25.5%";
+    rocket.style.marginLeft = "25.5%";
     rocket.classList.replace(rocket.className, "earth");
     earth_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
     moon_css.animation = "";
@@ -101,7 +101,7 @@ const earthMouseEnter = (e) => {
 const moonMouseEnter = (e) => {
     cnt = 1;
     left = 40.5;
-    rocket.style.left = "40.5%";
+    rocket.style.marginLeft = "40.5%";
     rocket.classList.replace(rocket.className, "moon");
     moon_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
     earth_css.animation = "";
@@ -116,7 +116,7 @@ const moonMouseEnter = (e) => {
 const saturnMouseEnter = (e) => {
     cnt = 2;
     left = 55.5;
-    rocket.style.left = "55.5%";
+    rocket.style.marginLeft = "55.5%";
     rocket.classList.replace(rocket.className, "saturn");
     saturn_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
     earth_css.animation = "";
@@ -130,7 +130,7 @@ const saturnMouseEnter = (e) => {
 const jupyterMouseEnter = (e) => {
     cnt = 3;
     left = 70.5;
-    rocket.style.left = "70.5%";
+    rocket.style.marginLeft = "70.5%";
     rocket.classList.replace(rocket.className, "jupyter");
     jupyter_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
     earth_css.animation = "";

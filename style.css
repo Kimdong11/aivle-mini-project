@@ -92,10 +92,13 @@ body {
     animation: textMove 1.5s 0.1s ease-in-out infinite;
 }
 
+.rocket-image {
+    width: 100vw;
+}
+
 #rocket {
-    position: absolute;
-    left: 25.5%;
-    bottom: 100px;
+    margin-top: 7%;
+    margin-left: 25.5%;
     width: 60px;
     height: 80px;
 }
