@@ -3,12 +3,33 @@
     src: url("./font/Super\ Retro\ Italic\ M54.ttf");
 }
 
+@keyframes bgMove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 900px;
+    }
+}
+
 @keyframes imageMove {
     0% {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-60px);
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes textMove {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-25px);
     }
     100% {
         transform: translateY(0px);
@@ -25,7 +46,10 @@ body {
     height: 100vh;
     background-image: url("./image/background.jpeg");
     background-size: cover;
+    background-position: 0 0;
+    background-repeat: repeat-y;
     z-index: -1;
+    animation: bgMove 10s linear infinite;
 }
 
 .circle-container {
@@ -45,6 +69,7 @@ body {
     color: orange;
     opacity: 88%;
     text-shadow: -3px 0 orangered, 0 3px orangered, 3px 0 orangered, 0 -3px orangered;
+    animation: textMove 1.5s ease-in-out infinite;
 }
 .line {
     margin-top: 15px;
@@ -53,6 +78,7 @@ body {
     height: 10px;
     border-radius: 3px;
     opacity: 90%;
+    animation: textMove 1.5s 0.2s ease-in-out infinite;
 }
 
 .start-text-shadow {
@@ -63,6 +89,7 @@ body {
     color: black;
     z-index: -1;
     opacity: 80%;
+    animation: textMove 1.5s 0.1s ease-in-out infinite;
 }
 
 #rocket {
@@ -80,6 +107,7 @@ body {
 }
 
 #earth {
+    cursor: pointer;
     margin-left: 40px;
     margin-right: 40px;
     width: 130px;
@@ -87,6 +115,7 @@ body {
 }
 
 #moon {
+    cursor: pointer;
     margin-left: 40px;
     margin-right: 40px;
     width: 130px;
@@ -94,6 +123,7 @@ body {
 }
 
 #saturn {
+    cursor: pointer;
     margin-left: 40px;
     margin-right: 40px;
     width: 140px;
@@ -101,6 +131,7 @@ body {
 }
 
 #jupyter {
+    cursor: pointer;
     margin-left: 40px;
     margin-right: 40px;
     width: 130px;

@@ -13,23 +13,23 @@ const class_name = ["earth", "moon", "saturn", "jupyter"];
 let left = 40.5;
 let cnt = 1;
 
-const earth_css = document.styleSheets[1].rules[10].style;
-const moon_css = document.styleSheets[1].rules[11].style;
-const saturn_css = document.styleSheets[1].rules[12].style;
-const jupyter_css = document.styleSheets[1].rules[13].style;
+const earth_css = document.styleSheets[1].rules[12].style;
+const moon_css = document.styleSheets[1].rules[13].style;
+const saturn_css = document.styleSheets[1].rules[14].style;
+const jupyter_css = document.styleSheets[1].rules[15].style;
 
 // Input Keyboard Function
 const handleMove = (e) => {
     const key = e.key;
     c_name = rocket.className;
-
-    if (key == "ArrowRight" && left < 80.5) {
+    console.log(cnt);
+    if (key == "ArrowRight" && cnt <= 3) {
         rocket.style.left = `${left}%`;
         rocket.classList.replace(c_name, class_name[cnt]);
         imageAnimation(class_name[cnt]);
         cnt += 1;
         left += 15;
-    } else if (key == "ArrowLeft" && left > 40) {
+    } else if (key == "ArrowLeft" && cnt >= 1) {
         imageAnimation(class_name[cnt - 1]);
         rocket.classList.replace(c_name, class_name[cnt - 1]);
         left -= 15;
@@ -82,6 +82,74 @@ const imageAnimation = (name) => {
     }
 };
 
+const earthMouseEnter = (e) => {
+    cnt = 0;
+    left = 25.5;
+    console.log(cnt);
+    rocket.style.left = "25.5%";
+    rocket.classList.replace(rocket.className, "earth");
+    earth_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
+    moon_css.animation = "";
+    saturn_css.animation = "";
+    jupyter_css.animation = "";
+    earthText.innerText = "Press Enter";
+    moonText.innerText = "";
+    saturnText.innerText = "";
+    jupyterText.innerText = "";
+};
+
+const moonMouseEnter = (e) => {
+    cnt = 1;
+    left = 40.5;
+    rocket.style.left = "40.5%";
+    rocket.classList.replace(rocket.className, "moon");
+    moon_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
+    earth_css.animation = "";
+    saturn_css.animation = "";
+    jupyter_css.animation = "";
+    moonText.innerText = "Press Enter";
+    earthText.innerText = "";
+    saturnText.innerText = "";
+    jupyterText.innerText = "";
+};
+
+const saturnMouseEnter = (e) => {
+    cnt = 2;
+    left = 55.5;
+    rocket.style.left = "55.5%";
+    rocket.classList.replace(rocket.className, "saturn");
+    saturn_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
+    earth_css.animation = "";
+    moon_css.animation = "";
+    jupyter_css.animation = "";
+    saturnText.innerText = "Press Enter";
+    earthText.innerText = "";
+    moonText.innerText = "";
+    jupyterText.innerText = "";
+};
+const jupyterMouseEnter = (e) => {
+    cnt = 3;
+    left = 70.5;
+    rocket.style.left = "70.5%";
+    rocket.classList.replace(rocket.className, "jupyter");
+    jupyter_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
+    earth_css.animation = "";
+    moon_css.animation = "";
+    saturn_css.animation = "";
+    jupyterText.innerText = "Press Enter";
+    earthText.innerText = "";
+    moonText.innerText = "";
+    saturnText.innerText = "";
+};
+
+const test = (e) => {
+    console.log(e);
+};
 imageAnimation(rocket.className);
 
+earth.addEventListener("mouseenter", earthMouseEnter);
+moon.addEventListener("mouseenter", moonMouseEnter);
+saturn.addEventListener("mouseenter", saturnMouseEnter);
+jupyter.addEventListener("mouseenter", jupyterMouseEnter);
+rocket.addEventListener("mouseenter", test);
 window.addEventListener("keydown", handleMove);
