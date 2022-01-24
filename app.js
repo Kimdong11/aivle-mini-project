@@ -22,16 +22,17 @@ const jupyter_css = document.styleSheets[1].rules[16].style;
 const handleMove = (e) => {
     const key = e.key;
     c_name = rocket.className;
+    console.log(window.screen.height);
     if (key == "ArrowRight" && cnt <= 3) {
         rocket.style.marginLeft = `${left}%`;
         rocket.classList.replace(c_name, class_name[cnt]);
         imageAnimation(class_name[cnt]);
         cnt += 1;
-        left += 15;
+        left += 14.2;
     } else if (key == "ArrowLeft" && cnt >= 1) {
         imageAnimation(class_name[cnt - 1]);
         rocket.classList.replace(c_name, class_name[cnt - 1]);
-        left -= 15;
+        left -= 14.2;
         cnt -= 1;
         rocket.style.marginLeft = `${left}%`;
     }
@@ -83,9 +84,8 @@ const imageAnimation = (name) => {
 
 const earthMouseEnter = (e) => {
     cnt = 0;
-    left = 25.5;
-    console.log(cnt);
-    rocket.style.marginLeft = "25.5%";
+    left = 26.5;
+    rocket.style.marginLeft = "26.5%";
     rocket.classList.replace(rocket.className, "earth");
     earth_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
     moon_css.animation = "";
@@ -99,8 +99,8 @@ const earthMouseEnter = (e) => {
 
 const moonMouseEnter = (e) => {
     cnt = 1;
-    left = 40.5;
-    rocket.style.marginLeft = "40.5%";
+    left = 40.7;
+    rocket.style.marginLeft = "40.7%";
     rocket.classList.replace(rocket.className, "moon");
     moon_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
     earth_css.animation = "";
@@ -114,8 +114,8 @@ const moonMouseEnter = (e) => {
 
 const saturnMouseEnter = (e) => {
     cnt = 2;
-    left = 55.5;
-    rocket.style.marginLeft = "55.5%";
+    left = 54.9;
+    rocket.style.marginLeft = "54.9%";
     rocket.classList.replace(rocket.className, "saturn");
     saturn_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
     earth_css.animation = "";
@@ -128,8 +128,8 @@ const saturnMouseEnter = (e) => {
 };
 const jupyterMouseEnter = (e) => {
     cnt = 3;
-    left = 70.5;
-    rocket.style.marginLeft = "70.5%";
+    left = 69.1;
+    rocket.style.marginLeft = "69.1%";
     rocket.classList.replace(rocket.className, "jupyter");
     jupyter_css.animation = "1.5s ease-in-out 0s infinite normal none running imageMove";
     earth_css.animation = "";
@@ -141,14 +141,11 @@ const jupyterMouseEnter = (e) => {
     saturnText.innerText = "";
 };
 
-const test = (e) => {
-    console.log(e);
-};
+
 imageAnimation(rocket.className);
 
 earth.addEventListener("mouseenter", earthMouseEnter);
 moon.addEventListener("mouseenter", moonMouseEnter);
 saturn.addEventListener("mouseenter", saturnMouseEnter);
 jupyter.addEventListener("mouseenter", jupyterMouseEnter);
-rocket.addEventListener("mouseenter", test);
 window.addEventListener("keydown", handleMove);
