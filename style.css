@@ -52,11 +52,12 @@ body {
     animation: bgMove 10s linear infinite;
 }
 
-.circle-container {
+.title-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
 }
 
 .start-text {
@@ -165,7 +166,27 @@ body {
 
 .status-bar {
     position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
+}
+
+.status-bar .keyboard-command__text {
+    display: flex;
+    margin-top: -10px;
+    margin-right: 100px;
+}
+
+.status-bar .keyboard-command__text img {
+    width: 50px;
+    height: 50px;
+}
+
+.status-bar .keyboard-command__text h1 {
+    margin-top: 15px;
+    margin-left: 51px;
 }
 
 .status-bar img {
@@ -174,6 +195,12 @@ body {
     border-radius: 50%;
     margin: 0 0 40px 40px;
 }
+
+.status-bar .login-menu {
+    margin-top: -62px;
+    margin-right: 40px;
+}
+
 .github-icon:hover,
 .email-icon:hover {
     cursor: pointer;

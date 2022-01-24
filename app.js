@@ -22,7 +22,6 @@ const jupyter_css = document.styleSheets[1].rules[16].style;
 const handleMove = (e) => {
     const key = e.key;
     c_name = rocket.className;
-    console.log(cnt);
     if (key == "ArrowRight" && cnt <= 3) {
         rocket.style.marginLeft = `${left}%`;
         rocket.classList.replace(c_name, class_name[cnt]);
