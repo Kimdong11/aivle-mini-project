@@ -21,6 +21,7 @@ const jupyter_css = document.styleSheets[1].rules[16].style;
 // Input Keyboard Function
 const handleMove = (e) => {
     const key = e.key;
+    console.log(window.screen.height);
     c_name = rocket.className;
     if (key == "ArrowRight" && cnt <= 3) {
         rocket.style.marginLeft = `${left}%`;
